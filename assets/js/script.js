@@ -1,8 +1,12 @@
+console.log("hello");
+
 var question = document.getElementById("question");
 var choices = Array.from(document.getElementsByClassName("choice-text"));
+console.log(choices);
+var btnClickEl = document.getElementsByClassName("choice-container")
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -98,12 +102,14 @@ function startGame() {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
+    console.log(availableQuestions);
     getNewQuestion();
 };
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
-        return window.location.assign(/*.end.html*/);
+        // take user to end of quiz page
+        return window.location.assign(quizend.html);
     }
 
     questionCounter++;
@@ -112,23 +118,29 @@ function getNewQuestion() {
     question.innerText = currentQuestion.question;
 
 
-choices.forEach(choice => {
+    choices.forEach(choice => {
     var number = choice.dataset["number"];
     choice.innerText = currentQuestion["choice" + number];
 });
-
+    // this gets rid of question already used
 availableQuestions.splice(questionIndex, 1);
 
 acceptingAnswers = true;
 };
 
 choices.forEach(choice => {
-    var selectChoice = e.target;
-    var selectAnswer = selectChoice.dataset("number");
+    choice.addEventListener("click", e => {
+        console.log(e.target);
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+
+        var selectChoice = e.target;
+        var selectAnswer = selectChoice.dataset["number"];
+        getNewQuestion();
+    });
+    
 })
-
-
-
 
 function clicked() {
     if (questions.question[0] === questions.choice1) {
@@ -137,3 +149,36 @@ function clicked() {
 };
 
 startGame();
+/*
+// testing function to iterate through questions
+// set start
+var start = true;
+
+// iterate through questions
+function iterate(question) {
+    // display the result
+    var resulrt = document.getElementsByClassName("result");
+    result[0].innerText = "";
+
+    // getting the question
+    const question = document.getElementById("question");
+
+    // setting the question text
+    question.innerText = questions.question;
+
+    //getting the options
+    
+}
+
+var handleBtnClick = function(event) {
+    var data = event.target.getAttribute("data");
+    if (data == 1) {
+        getNewQuestion();
+    })
+}
+
+
+
+
+btnClickEl.addEventListener("click", handleBtnClick);
+*/
