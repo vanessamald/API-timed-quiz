@@ -18,16 +18,16 @@ let questions = [
   }, 
 
 {
-    question: "QUESTION 2",
+    question: "Which characted lost a toe during Thanksgiving?",
     choice1: "CHOICE 1",
-    choice2: "CHOICE 2",
+    choice2: "Chandler",
     choice3: "CHOICE 3",
     choice4: "CHOICE 4",
     answer: 2
 }, 
 {
-    question: "QUESTION 3",
-    choice1: "CHOICE 1",
+    question: "What is the name of Joey's agent?",
+    choice1: "Estelle",
     choice2: "CHOICE 2",
     choice3: "CHOICE 3",
     choice4: "CHOICE 4",
@@ -58,18 +58,18 @@ let questions = [
     answer: 2
 }, 
 {
-    question: "QUESTION 7",
+    question: "What is Rachel's actual favorite movie?",
     choice1: "CHOICE 1",
-    choice2: "CHOICE 2",
+    choice2: "Weekend at Bernie's",
     choice3: "CHOICE 3",
-    choice4: "CHOICE 4",
+    choice4: "Dangerous Liaisons",
     answer: 2
 }, 
 {
-    question: "QUESTION 8",
+    question: "Who was Monica's first kiss?",
     choice1: "CHOICE 1",
     choice2: "CHOICE 2",
-    choice3: "CHOICE 3",
+    choice3: "Ross",
     choice4: "CHOICE 4",
     answer: 3
 }, 
@@ -82,11 +82,11 @@ let questions = [
     answer: 1
 }, 
 {
-    question: "QUESTION 10",
-    choice1: "CHOICE 1",
-    choice2: "CHOICE 2",
-    choice3: "CHOICE 3",
-    choice4: "CHOICE 4",
+    question: "Who was the first person to find out Monica and Chandler were dating?",
+    choice1: "Gunther",
+    choice2: "Rachel",
+    choice3: "Ross",
+    choice4: "Joey",
     answer: 4
 }, 
 ];
