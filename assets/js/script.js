@@ -9,8 +9,8 @@ let availableQuestions = [];
 
 let questions = [
   {
-      question: "QUESTION 1",
-      choice1: "CHOICE 1",
+      question: "Which character has a twin?",
+      choice1: "Phoebe",
       choice2: "CHOICE 2",
       choice3: "CHOICE 3",
       choice4: "CHOICE 4",
@@ -34,25 +34,25 @@ let questions = [
     answer: 1
 }, 
 {
-    question: "QUESTION 4",
+    question: "How many times has Ross been married?",
     choice1: "CHOICE 1",
     choice2: "CHOICE 2",
     choice3: "CHOICE 3",
-    choice4: "CHOICE 4",
+    choice4: "4",
     answer: 4
 }, 
 {
-    question: "QUESTION 5",
+    question: "What is the name of Rachel's assistant?",
     choice1: "CHOICE 1",
     choice2: "CHOICE 2",
-    choice3: "CHOICE 3",
+    choice3: "Tag",
     choice4: "CHOICE 4",
     answer: 3
 }, 
 {
-    question: "QUESTION 6",
+    question: "Why did Chandler spend Thanksgiving in a box?",
     choice1: "CHOICE 1",
-    choice2: "CHOICE 2",
+    choice2: "He kissed Joey's girlfriend",
     choice3: "CHOICE 3",
     choice4: "CHOICE 4",
     answer: 2
@@ -74,8 +74,8 @@ let questions = [
     answer: 3
 }, 
 {
-    question: "QUESTION 9",
-    choice1: "CHOICE 1",
+    question: "What is Chandler's middle name?",
+    choice1: "Muriel",
     choice2: "CHOICE 2",
     choice3: "CHOICE 3",
     choice4: "CHOICE 4",
