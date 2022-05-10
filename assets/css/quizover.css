@@ -1,0 +1,69 @@
+* {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-image: url(../images/quizover2.jpeg);
+    min-height: 100%;
+}
+
+
+
+h1 {
+    font-size: 6vw;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    color: whitesmoke;
+    font-size: 4vw;
+}
+
+#final-score {
+    color: whitesmoke;
+    font-size: 4vw;
+}
+
+/* button styling */
+.btn {
+    font-size: 1rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid whitesmoke;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #333; 
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* button styling end */
+
+/* form styling */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+}
+
+input::placeholder {
+    color:  #333; 
+}
