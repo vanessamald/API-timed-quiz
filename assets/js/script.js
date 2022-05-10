@@ -1,16 +1,19 @@
-console.log("hello");
-
+// dom elements
 var question = document.getElementById("question");
 var choices = Array.from(document.getElementsByClassName("choice-text"));
 console.log(choices);
-var btnClickEl = document.getElementsByClassName("choice-container")
+var btnClickEl = document.getElementsByClassName("choice-container");
+var questionNumber = document.getElementById("current-selection");
+var userScore = document.getElementById("score");
 
+// variables for quiz
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// array for quiz questions
 let questions = [
   {
       question: "Which character has a twin?",
@@ -95,9 +98,11 @@ let questions = [
 }, 
 ];
 
+// variables for points and amount of questions
 var correctPoints = 10;
 var maxQuestions = 10;
 
+// function to start quiz
 function startGame() {
     questionCounter = 0;
     score = 0;
@@ -106,18 +111,27 @@ function startGame() {
     getNewQuestion();
 };
 
+// function to get new question from available questions
 function getNewQuestion() {
+    // if there are no questions left
     if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
+        // use local storage to save the user's score
+        localStorage.setItem('userRecentScore', score);
         // take user to end of quiz page
-        return window.location.assign(quizend.html);
+        return window.location.assign("quizover.html");
     }
-
+    
+    // iterate through available questions
     questionCounter++;
+    // display what question user is on 
+
+    questionNumber.innerText = questionCounter + "/" + maxQuestions; //CHECK ERROR HERE
+
+    // display a random question from available questions
     var questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
-
-
+    question.innerText = currentQuestion.question; //CHECK ERROR HERE
+    
     choices.forEach(choice => {
     var number = choice.dataset["number"];
     choice.innerText = currentQuestion["choice" + number];
@@ -128,16 +142,40 @@ availableQuestions.splice(questionIndex, 1);
 acceptingAnswers = true;
 };
 
+// log the user's answers 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         console.log(e.target);
         if (!acceptingAnswers) return;
 
         acceptingAnswers = false;
-
         var selectChoice = e.target;
         var selectAnswer = selectChoice.dataset["number"];
-        getNewQuestion();
+
+        var userAnswer = 'incorrect';
+        if (selectAnswer == currentQuestion.answer) {
+            userAnswer = 'correct';
+        
+        // display total score at top of page for user
+        if (userAnswer === 'correct') {
+           totalScore (correctPoints);
+        }
+      
+        // add class to user selection: green for correct and red for incorrect
+        selectChoice.parentElement.classList.add(userAnswer);
+
+        // set a timeout for added class 
+        setTimeout (() => {
+            selectChoice.parentElement.classList.remove(userAnswer);
+            getNewQuestion();
+        }, 1000);
+            
+        }
+        console.log(userAnswer);
+    
+
+        //console.log(selectAnswer == currentQuestion.answer);
+        
     });
     
 })
@@ -148,37 +186,10 @@ function clicked() {
     } 
 };
 
+function totalScore(num) {
+    score += num
+    userScore.innerText = score;
+}
+
 startGame();
-/*
-// testing function to iterate through questions
-// set start
-var start = true;
 
-// iterate through questions
-function iterate(question) {
-    // display the result
-    var resulrt = document.getElementsByClassName("result");
-    result[0].innerText = "";
-
-    // getting the question
-    const question = document.getElementById("question");
-
-    // setting the question text
-    question.innerText = questions.question;
-
-    //getting the options
-    
-}
-
-var handleBtnClick = function(event) {
-    var data = event.target.getAttribute("data");
-    if (data == 1) {
-        getNewQuestion();
-    })
-}
-
-
-
-
-btnClickEl.addEventListener("click", handleBtnClick);
-*/
