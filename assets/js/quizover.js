@@ -30,7 +30,11 @@ var score = {
 };
 // add object to high scores array
 highScores.push(score);
+console.log(score);
 
+localStorage.setItem('score', JSON.stringify(highScores));
+
+/*
 // sort scores from highest to lowest 
 highScores.sort( (a, b) => b.score - a.score)
 
@@ -42,5 +46,6 @@ localStorage.setItem("highScores", JSON.stringify(highScores));
 //window.location.assign("");
 
 console.log(highScores);
+*/
 };
 savingScoreBtn.addEventListener("click", saveUserScore);

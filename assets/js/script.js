@@ -18,80 +18,80 @@ let questions = [
   {
       question: "Which character has a twin?",
       choice1: "Phoebe",
-      choice2: "CHOICE 2",
-      choice3: "CHOICE 3",
-      choice4: "CHOICE 4",
+      choice2: "Monica",
+      choice3: "Chandler",
+      choice4: "Rachel",
       answer: 1
   }, 
 
 {
     question: "Which characted lost a toe during Thanksgiving?",
-    choice1: "CHOICE 1",
+    choice1: "Joey",
     choice2: "Chandler",
-    choice3: "CHOICE 3",
-    choice4: "CHOICE 4",
+    choice3: "Monica",
+    choice4: "Ross",
     answer: 2
 }, 
 {
     question: "What is the name of Joey's agent?",
     choice1: "Estelle",
-    choice2: "CHOICE 2",
-    choice3: "CHOICE 3",
-    choice4: "CHOICE 4",
+    choice2: "Amy",
+    choice3: "Jill",
+    choice4: "Ursulla",
     answer: 1
 }, 
 {
     question: "How many times has Ross been married?",
-    choice1: "CHOICE 1",
-    choice2: "CHOICE 2",
-    choice3: "CHOICE 3",
+    choice1: "3",
+    choice2: "2",
+    choice3: "Never",
     choice4: "4",
     answer: 4
 }, 
 {
     question: "What is the name of Rachel's assistant?",
-    choice1: "CHOICE 1",
-    choice2: "CHOICE 2",
+    choice1: "Danny",
+    choice2: "Joshua",
     choice3: "Tag",
-    choice4: "CHOICE 4",
+    choice4: "Mark",
     answer: 3
 }, 
 {
     question: "Why did Chandler spend Thanksgiving in a box?",
-    choice1: "CHOICE 1",
+    choice1: "He was performing a magic trick",
     choice2: "He kissed Joey's girlfriend",
-    choice3: "CHOICE 3",
-    choice4: "CHOICE 4",
+    choice3: "He made fun of Monica for being fat",
+    choice4: "He hates Thanksgiving",
     answer: 2
 }, 
 {
-    question: "What is Rachel's actual favorite movie?",
-    choice1: "CHOICE 1",
-    choice2: "Weekend at Bernie's",
-    choice3: "CHOICE 3",
-    choice4: "Dangerous Liaisons",
+    question: "What did Phoebe change her name to after getting married?",
+    choice1: "Denise",
+    choice2: "Princess Consuela Banana Hammock",
+    choice3: "Crap Bag",
+    choice4: "Regina Phalange",
     answer: 2
 }, 
 {
     question: "Who was Monica's first kiss?",
-    choice1: "CHOICE 1",
-    choice2: "CHOICE 2",
+    choice1: "Richard",
+    choice2: "Jean-Claude Van Damme",
     choice3: "Ross",
-    choice4: "CHOICE 4",
+    choice4: "Chandler",
     answer: 3
 }, 
 {
     question: "What is Chandler's middle name?",
     choice1: "Muriel",
-    choice2: "CHOICE 2",
-    choice3: "CHOICE 3",
-    choice4: "CHOICE 4",
+    choice2: "Matthew",
+    choice3: "Mark",
+    choice4: "Michael",
     answer: 1
 }, 
 {
     question: "Who was the first person to find out Monica and Chandler were dating?",
-    choice1: "Gunther",
-    choice2: "Rachel",
+    choice1: "Rachel",
+    choice2: "Phoebe",
     choice3: "Ross",
     choice4: "Joey",
     answer: 4
