@@ -29,7 +29,7 @@ h2 {
 .btn {
     font-size: 1rem;
     padding: 1rem 0;
-    width: 20rem;
+    width: 15rem;
     text-align: center;
     border: 0.1rem solid whitesmoke;
     margin-bottom: 1rem;
@@ -38,6 +38,7 @@ h2 {
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -45,6 +46,7 @@ h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 /* button styling end */
@@ -70,12 +72,14 @@ input::placeholder {
 
 /* styling for highscores */
 #header {
-    background-image: url(../images/quizover.png);
+    background-image: url(../images/friendsxmas.jpeg);
     min-height: 100%;
 }
 
-#list-highscores {
+.list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+    color: white;
+    font-size: 2rem;
 }
