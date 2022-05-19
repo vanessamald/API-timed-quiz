@@ -16,15 +16,12 @@ finalScore.innerText = userRecentScore;
 username.addEventListener("keyup", () => {
     console.log(username.value);
     // button is disabled if no username in text box
-    savingScoreBtn.disabled = !username.value;
+   savingScoreBtn.disabled = !username.value;
 })
 
 saveUserScore = e => {
     console.log("SAVE BUTTON CLICKED");
     e.preventDefault();
-
-
-savingScoreBtn.addEventListener("click", saveUserScore);
 
 // object with username and score info
 var score = {
@@ -46,3 +43,4 @@ localStorage.setItem("highScores", JSON.stringify(highScores));
 
 console.log(highScores);
 };
+savingScoreBtn.addEventListener("click", saveUserScore);

@@ -152,16 +152,13 @@ choices.forEach(choice => {
         var selectChoice = e.target;
         var selectAnswer = selectChoice.dataset["number"];
 
-        var userAnswer = 'incorrect';
         if (selectAnswer == currentQuestion.answer) {
             userAnswer = 'correct';
         
         // display total score at top of page for user
         if (userAnswer === 'correct') {
            totalScore (correctPoints);
-        }
-      
-        // add class to user selection: green for correct and red for incorrect
+                   // add class for correct choice: green  
         selectChoice.parentElement.classList.add(userAnswer);
 
         // set a timeout for added class 
@@ -169,15 +166,22 @@ choices.forEach(choice => {
             selectChoice.parentElement.classList.remove(userAnswer);
             getNewQuestion();
         }, 1000);
-            
         }
-        console.log(userAnswer);
-    
+        }  
+        // add class for incorrect choice: red 
+        else   {
+            userAnswer = 'incorrect';
+        // remove class and set timeout
+        selectChoice.parentElement.classList.add(userAnswer);
+        setTimeout (() => {
+            selectChoice.parentElement.classList.remove(userAnswer);
+            getNewQuestion();
 
-        //console.log(selectAnswer == currentQuestion.answer);
-        
-    });
-    
+            //console.log(getNewQuestion);
+        }, 1000);
+        }
+        console.log(selectAnswer == currentQuestion.answer);
+    });  
 })
 
 function clicked() {

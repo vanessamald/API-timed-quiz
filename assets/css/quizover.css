@@ -67,3 +67,15 @@ input {
 input::placeholder {
     color:  #333; 
 }
+
+/* styling for highscores */
+#header {
+    background-image: url(../images/quizover.png);
+    min-height: 100%;
+}
+
+#list-highscores {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+}
