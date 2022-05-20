@@ -5,7 +5,8 @@ var displayUsername = document.getElementById('display-name');
 var displayScore = document.getElementById('display-score');
 var displayUsername2 = document.getElementById('display-name2');
 var displayScore2 = document.getElementById('display-score2');
-
+var displayUsername3 = document.getElementById('display-name3');
+var displayScore3 = document.getElementById('display-score3');
 
 console.log(highScores);
 

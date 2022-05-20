@@ -49,6 +49,19 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(51, 51, 51, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
 /* button styling end */
 
 /* form styling */
@@ -80,6 +93,17 @@ input::placeholder {
     list-style: none;
     padding-left: 0;
     margin-bottom: 3rem;
-    color: white;
+    color: #9966ff;
     font-size: 2rem;
+    font-weight: bold;
 }
+
+.highscore-container {
+    flex: wrap;
+    -ms-flex-align: center;
+}
+
+#highScores {
+    font-size: 5rem;
+}
+

@@ -34,18 +34,18 @@ console.log(score);
 
 localStorage.setItem('score', JSON.stringify(highScores));
 
-/*
+
 // sort scores from highest to lowest 
 highScores.sort( (a, b) => b.score - a.score)
 
 // set cut off for high scores
-highScores.splice(5);
+highScores.splice(3);
 
 localStorage.setItem("highScores", JSON.stringify(highScores));
-// go back home after saving score
-//window.location.assign("");
+//go back home after saving score
+window.location.assign("index.html");
 
 console.log(highScores);
-*/
+
 };
 savingScoreBtn.addEventListener("click", saveUserScore);
