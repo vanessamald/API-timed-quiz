@@ -127,12 +127,12 @@ function getNewQuestion() {
 
     // display what question user is on 
 
-    questionNumber.innerText = questionCounter + "/" + maxQuestions; //CHECK ERROR HERE
+    questionNumber.innerText = questionCounter + "/" + maxQuestions; 
 
     // display a random question from available questions
     var questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question; //CHECK ERROR HERE
+    question.innerText = currentQuestion.question; 
     
     choices.forEach(choice => {
     var number = choice.dataset["number"];
@@ -186,7 +186,7 @@ choices.forEach(choice => {
     });  
 })
 
-// set a timer TESTING
+// set a 1 minute timer
 var count = 60;
 var interval = setInterval(function(){
   document.getElementById('count').innerHTML=count;
@@ -194,8 +194,10 @@ var interval = setInterval(function(){
   if (count === 0){
     clearInterval(interval);
     document.getElementById('count').innerHTML='Done';
-    // or...
+    // if user is out of time
     alert("You're out of time!");
+    // take user to quiz over page when out of time
+    return window.location.assign("quizover.html"); 
   }
 }, 1000);
 
