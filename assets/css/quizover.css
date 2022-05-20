@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(../images/quizover2.jpeg);
+    background-image: url(../images/friends.jpg);
     min-height: 100%;
 }
 
@@ -84,8 +84,9 @@ input::placeholder {
 }
 
 /* styling for highscores */
+
 #header {
-    background-image: url(../images/friendsxmas.jpeg);
+    background-image: url(../images/quizover.png);
     min-height: 100%;
 }
 
