@@ -109,6 +109,7 @@ function startGame() {
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNewQuestion();
+    setInterval(); //TESTING TIMER HERE
 };
 
 // function to get new question from available questions
@@ -123,6 +124,7 @@ function getNewQuestion() {
     
     // iterate through available questions
     questionCounter++;
+
     // display what question user is on 
 
     questionNumber.innerText = questionCounter + "/" + maxQuestions; //CHECK ERROR HERE
@@ -185,7 +187,7 @@ choices.forEach(choice => {
 })
 
 // set a timer TESTING
-var count = 15;
+var count = 60;
 var interval = setInterval(function(){
   document.getElementById('count').innerHTML=count;
   count--;
